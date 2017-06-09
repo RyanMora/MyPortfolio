@@ -5,6 +5,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var watch = require('gulp-watch');
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -96,4 +97,18 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
+});
+
+gulp.task('stream', function () {
+    // Endless stream mode
+    return watch('css/**/*.css', { ignoreInitial: false })
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('callback', function () {
+    // Callback mode, useful if any plugin in the pipeline depends on the `end`/`flush` event
+    return watch('css/**/*.css', function () {
+        gulp.src('css/**/*.css')
+            .pipe(gulp.dest('build'));
+    });
 });
