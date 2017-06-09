@@ -434,6 +434,9 @@ footer {
     color: lightslategray;
     background-color: white; }
 
+button.btn.btn-success.btn-lg {
+  cursor: pointer; }
+
 .btn-social {
   font-size: 20px;
   line-height: 45px;

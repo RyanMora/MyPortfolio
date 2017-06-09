@@ -26,6 +26,10 @@
     @include button-variant(white, $theme-success, $theme-success);
 }
 
+button.btn.btn-success.btn-lg {
+  cursor: pointer;
+}
+
 .btn-social {
     font-size: 20px;
     line-height: 45px;
