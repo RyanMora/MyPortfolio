@@ -147,7 +147,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm" action="http://formspree.io/you@email.com" novalidate>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
                                 <label>Name</label>
@@ -185,6 +185,10 @@
                 </div>
             </div>
         </div>
+        <form action="http://formspree.io/ryan.mora23@gmail.com" method="post"><input type="email"
+          name="_replyto"><textarea
+          name="body"></textarea>
+          <input type="submit" value="Send"></form>
     </section>
 
     <!-- Footer -->
