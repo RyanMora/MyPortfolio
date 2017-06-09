@@ -444,6 +444,13 @@ footer {
   border: 2px solid white;
   border-radius: 100%; }
 
+.btn-social img {
+  max-width: 100%;
+  max-height: 75%; }
+
+.btn-social.btn-outline:hover {
+  background-color: black; }
+
 .btn:focus,
 .btn:active,
 .btn.active {
